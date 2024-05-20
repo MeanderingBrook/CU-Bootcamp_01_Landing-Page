@@ -1,0 +1,102 @@
+hr { 
+    display: block;
+    width: 50%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    border-color: #CFF3FF;
+} 
+
+input {
+  margin-right: 25px;
+}
+
+label {
+  /* margin-top: 10px; */
+  /* margin-bottom: 25px; */
+  margin-left: 10px;
+  margin-right: 10px;
+
+  font-size: 14pt;
+}
+
+::placeholder {
+  color: gray;
+  opacity: 1; /* Firefox */
+}
+
+.btn {
+  margin-left: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit {
+  border-color: darkblue;
+  background-color: rgb(223, 241, 252);
+  color: darkblue;
+}
+
+.submit:hover {
+  border-color: lightskyblue;
+  background-color: darkblue;
+  color: white;
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+  padding-top: 10px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 10px;
+
+  border: 2px solid lightskyblue;
+  box-shadow: 3px 5px indigo;
+}
+
+.label-wrap {
+  display:flex;
+}
+
+#address_type {
+  /* margin-right: 20px; */
+  font-size: 12pt;
+}
+
+#address_select {
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+/* #customer-name {
+  color: darkblue;
+} */
+
+#customer-contact {
+  color: darkblue;
+}
+
+#page_header {
+  /* font: 1.2em "Firma Sans", sans-serif; */
+  color: indigo;
+  text-align: center;
+}
+
+
+
+
+
+
