@@ -1,6 +1,20 @@
+body {
+  font: 1.0em "Firma Sans", sans-serif;
+}
+
 footer {
-  margin-left: 10px;
+  display: flex;
+  margin: 10px;
+  width: calc(100% - 20px);
+  padding: 5px;
+  justify-content: center;
+  background-color: #1A237E;
   font-size: 8pt;
+  color: white;
+}
+
+footer a {
+  color: white;
 }
 
 h1 {
@@ -8,8 +22,17 @@ h1 {
 }
 
 h2 {
+  scroll-margin-top: 200px; /* Buffers internal page links for height of fixed-Position Page Header and Navbar (https://css-tricks.com/hash-tag-links-padding/) */
+  scroll-snap-margin-top: 200px; /* Required for Browsers under iOS 11 and older */
   text-align: center;
   color:darkblue;
+}
+
+/* Applied if Browser supports 'scroll-snap-margin' property */
+@supports (scroll-margin-top: 0;) {  /* Disregard ';' Error */
+  h2 {
+    scroll-margin-top: 50px;
+  }
 }
 
 h3 {
@@ -33,16 +56,20 @@ input {
 }
 
 label {
-  /* margin-top: 10px; */
-  /* margin-bottom: 25px; */
   margin-left: 10px;
   margin-right: 10px;
-  /* font-size: 14pt; */
 }
 
 main {
-  margin-top: 120px; /* Add a top margin to avoid content overlay */
+  margin-top: 100px; /* Avoids content overlay with fixed-Position Page Header and Navbar */
   font: 1.0em "Firma Sans", sans-serif;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 ::placeholder {
@@ -50,13 +77,9 @@ main {
   opacity: 1; /* Firefox */
 }
 
-.about-us {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
+/* Deprecated Button Format */
+/* Formatted 'Flat' Buttons */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_outline_buttons */
 /* .btn {
   margin-left: 10px;
   border: 2px solid black;
@@ -85,6 +108,8 @@ main {
   color: white;
 } */
 
+/* 3D Button */
+/* https://www.joshwcomeau.com/animation/3d-button/ */
 .btn-push-background {
   margin-left: 10px;
   background: darkblue;
@@ -120,43 +145,19 @@ main {
   padding-left: 25px;
   padding-right: 10px;
 
-  border: 2px solid lightskyblue;
-  box-shadow: 3px 5px indigo;
+  border: 1px solid lightskyblue;
+  box-shadow: 2px 3px #2980B9;
 }
 
-/* Page Content */
-/* .content {
-  padding: 16px;
-} */
-
-/* Fixed Page Header */
+/* Deprecated Fixed-Position Page Header */
+/* Fixed-Position Page Header */
+/* https://www.w3schools.com/howto/howto_js_sticky_header.asp */
 /* .fixed-header {
   padding: 10px 10px;
   background-color: darkblue;
   color: white;
   text-align: center;
 } */
-
-.header img {
-  /* float: left; */
-  margin-left: 10px;
-  width:50px;
-  height:50px;
-  background-color: white;
-  /* position: fixed; */
-}
-
-.header h1 {
-  /* overflow: hidden; */
-  position: fixed;
-  top: 10px;
-  /* left: 10px; */
-  background-color: white;
-}
-
-.label-wrap {
-  display:flex;
-}
 
 /* Sticky Header (Applied by JS) */
 /* .sticky {
@@ -169,15 +170,19 @@ main {
   padding-top: 102px;
 } */
 
-/* Fixed Top Navigation Bar */
+.label-wrap {
+  display:flex;
+}
+
+/* Fixed-Position Navigation Bar */
+/* https://www.w3schools.com/howto/howto_css_fixed_menu.asp */
 .navbar {
   overflow: hidden;
-  background-color: darkblue;
+  background-color: #1A237E;
   position: fixed; /* Set the navbar to fixed position */
   top: 10; /* Position the navbar at the top of the page */
-  margin-left: 10px;
-  /* margin-right: 10px; */
-  width: 100%; /* Full width */
+  margin: 10;
+  width: calc(100% - 20px);
 }
 
 /* Links inside the navbar */
@@ -191,15 +196,8 @@ main {
 }
 
 .navbar a:hover {
-  background: #ddd;
-  color: red;
-}
-
-.service-desc {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  background: #81D4FA;
+  color: #0000ff;
 }
 
 #address_type {
@@ -213,22 +211,22 @@ main {
   margin-right: 20px;
 }
 
-/* #customer-name {
-  color: darkblue;
-} */
-
-#customer-contact {
-  color: black;
+#page-header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  top: 0px;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  background-color: white;
+  color: #1A237E;
 }
 
-#page_header {
-  font: 1.2em "Firma Sans", sans-serif;
-  color: darkblue;
+#page-header h1 {
+  margin-left: 20px;
   /* text-align: center; */
 }
-
-
-
 
 
 
